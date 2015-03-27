@@ -22,9 +22,6 @@
    	<td><%= post.description %></td>
     <td><%= image_tag post.picture_url(:thumb) if post.picture? %></td>
    	<td><%= link_to 'Show',post, class:'btn btn-mini btn-success' %></td>
-    <%if @user == post.user %>
-   	  <td><%= link_to 'Destroy', post, method: :delete, class:'btn btn-mini btn-danger', data: { confirm: 'Are you sure?' } %></td>
-    <%end %>
    	</tr>	
    	<% end %>
 

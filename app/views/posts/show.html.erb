@@ -20,6 +20,9 @@
 
 
 <div class="upload">
+<%if @user == @post.user %>
+<%= link_to 'Destroy', post_path, method: :delete, class:'btn btn-mini btn-danger', data: { confirm: 'Are you sure?' } %>
+<% end %>
  <%= link_to 'Home', posts_path, class:'btn btn-mini btn-primary' %>
  <% if @user %>
  <%= link_to 'Add More', new_post_path, class:'btn btn-mini btn-info' %>
