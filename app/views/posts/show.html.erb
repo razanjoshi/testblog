@@ -1,0 +1,27 @@
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>	
+  <%= @post.description %>
+</p>
+
+<p>
+	<strong>Uploaded By:</strong>
+	<%= @post.user.email %>
+</p>
+
+<div class="image-container2">
+  <%= image_tag(@post.picture_url, :width => 600) if @post.picture.present? %>
+</div>
+
+
+<div class="upload">
+ <%= link_to 'Home', posts_path, class:'btn btn-mini btn-primary' %>
+ <% if @user %>
+ <%= link_to 'Add More', new_post_path, class:'btn btn-mini btn-info' %>
+ <% end %>
+ </div>	
