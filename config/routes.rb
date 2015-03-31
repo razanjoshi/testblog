@@ -7,6 +7,7 @@ Testblog::Application.routes.draw do
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
+  match '/:page', :to => 'home#show', :constraints => {:page => /about|what|contact/}, :as => 'home'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
@@ -27,7 +28,6 @@ Testblog::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

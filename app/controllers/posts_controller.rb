@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @user = current_user
-    @posts = Post.all
+    @posts = params[:search] ? Post.search(params[:search]) : Post.all
   end
 
   def create

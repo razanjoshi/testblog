@@ -12,3 +12,13 @@
  *= require_tree .
  *= require bootstrap.min
  */
+
+ .active a{color:red}
+
+ .right-text{
+ 	margin: 8px 0 15px 0!important;
+ }
+
+ .rajan{
+ 	margin-top: 8px!important;
+ }

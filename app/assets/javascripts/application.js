@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require bootstrap.min
 //= require_tree .
+
+
+$('.nav navbar-nav').on('click','li', function(){
+   $(this).addClass('active').siblings().removeClass('active');
+});
