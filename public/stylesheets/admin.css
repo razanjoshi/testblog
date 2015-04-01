@@ -1,0 +1,30 @@
+div.boxsum {
+	width: 130px;
+	height: 150px;
+	background-color: #F2F5FA;
+	border: 3px solid #555;
+	text-align: center;
+	float: left;
+	margin-right: 45px;
+	margin-bottom: 40px;
+}
+
+div.boxsum.last { margin-right: 0 }
+
+div.boxsum h2 {
+	font-size: 3em;
+	background-color: #EDF1F8;
+	padding: 5px;
+	color: #59657A;
+	border-bottom: 1px solid #999;
+}
+
+div.boxsum span.value {
+	color: #3D3D3D;
+	font-size: 3em;
+}
+
+div.boxsum span.value.small {
+	color: #3D3D3D;
+	font-size: 2em;
+}
