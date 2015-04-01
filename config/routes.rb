@@ -1,5 +1,7 @@
 Testblog::Application.routes.draw do
   
+  # get "users/index"
+
   devise_for :users
 
   # The priority is based upon order of creation:
@@ -43,14 +45,16 @@ Testblog::Application.routes.draw do
   #   end
 
   # Sample resource route within a namespace:
-  resources :posts do
-  end
-  #   namespace :admin do
+  
+  namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-
+   resources :posts
+   resources :users
+   match '/', :to => 'admin#show', :as => 'show'
+  end
+  resources :posts do
+  end
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
    root :to => 'posts#index'
