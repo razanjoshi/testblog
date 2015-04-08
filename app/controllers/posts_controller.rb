@@ -26,6 +26,8 @@ class PostsController < ApplicationController
   def show
     @user = current_user
     @post = Post.find params[:id]
+    @comments = @post.comments.all
+    @comment = @post.comments.build
   end 
 
   def destroy
