@@ -1,5 +1,6 @@
 Testblog::Application.routes.draw do
-  
+  resources :comments
+
   # get "users/index"
 
   devise_for :users
