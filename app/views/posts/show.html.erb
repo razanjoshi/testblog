@@ -33,7 +33,7 @@
 <% if current_user %>
 <%= render 'comments/form' %>
 <% end %>
-
+<br>
 <div class="upload">
 <%if @user == @post.user %>
 <%= link_to 'Destroy', post_path, method: :delete, class:'btn btn-mini btn-danger', data: { confirm: 'Are you sure?' } %>
